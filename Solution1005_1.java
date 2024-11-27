@@ -20,32 +20,32 @@ public class Solution1005_1 {
 
     for (int i=0;i<N;i++){
        right.add(input.nextInt());
+        }
+  
+    int delta;
+    if (right.size() == 1){
+      delta = right.get(0);
     }
-    Collections.sort(right);
-    int max_w = right.get(right.size()-1);
-    
-    right.remove(right.size()-1);
+    else {
+    int max_w = Collections.max(right);
+    right.remove(right.indexOf(max_w));
     left.add(max_w);
+    
+    delta = Math.abs(sum(left) - sum(right));
 
-    int delta = Math.abs(
-      sum(left) - sum(right));
-
-    while(true){
-      int min_w = right.get(0);
-      right.remove(0);
-      left.add(min_w);
-      int new_delta = Math.abs(sum(right) - sum(left));
-      if (new_delta > delta){
-        break;
-      } else {
-        delta = new_delta;
-        continue;
+      while(true){
+        int min_w = Collections.min(right);
+        right.remove( right.indexOf(min_w));
+        left.add(min_w);
+        int new_delta = Math.abs(sum(left) - sum(right));
+        if (new_delta > delta){
+            break;
+        } else {
+            delta = new_delta;
+            continue;
+            } 
       }
-    }
-
-    //System.out.println(right);
-    //System.out.println(max_w);
-    //System.out.println(left);
+    } 
     System.out.println(delta);
   }
 }
