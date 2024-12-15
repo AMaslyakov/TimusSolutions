@@ -13,6 +13,4 @@ public class Solution2012 {
     } else {
       System.out.println("NO");
     }
-  }
-  }
-
+  }}
