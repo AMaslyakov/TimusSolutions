@@ -2,8 +2,7 @@ import java.io.*;
 
 public  class Solution2001 {
     public static void main(String[] args) throws IOException {
-       new Solution2001().run();
-    }
+       new Solution2001().run();}
 
     StreamTokenizer input;
     PrintWriter output;
@@ -21,13 +20,11 @@ public  class Solution2001 {
             input.nextToken();
             a[i] = (int) input.nval;
             input.nextToken();
-            b[i] = (int) input.nval;
-        }
+            b[i] = (int) input.nval;}
         int[][] result = new int[2][3];
         result[0] = a;
         result[1] = b;
-        return  result;
-    }
+        return  result;}
 
     void solve() throws IOException {
             int[][] weights = getAandB();

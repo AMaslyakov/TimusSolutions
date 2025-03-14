@@ -12,13 +12,9 @@ public class Solution1877 {
     while (brute_force<=9999) {
       if (brute_force % 2 == 0) {
         if(brute_force == code_1){
-          result = "yes";
-        }
+          result = "yes";}
       } else {
         if(brute_force == code_2){
-          result = "yes";
-        }}
-      brute_force++;
-    }
-    System.out.println(result);
-  }}
+          result = "yes";}}
+      brute_force++;}
+    System.out.println(result);}}

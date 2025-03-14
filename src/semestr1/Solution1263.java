@@ -2,11 +2,9 @@ import java.io.*;
 import java.util.Map;
 import java.util.HashMap;
 
-
 public  class Solution1263 {
     public static void main(String[] args) throws IOException {
-       new Solution1263().run();
-    }
+       new Solution1263().run();}
 
     StreamTokenizer input;
     PrintWriter output;
@@ -23,39 +21,31 @@ public  class Solution1263 {
         input.nextToken();
         int M = (int) input.nval;
         int[] result = {N, M};
-        return  result;
-    }
+        return  result;}
 
     int[] getVoices(int M) throws IOException{
         int[] voices = new int[M];
         for(int i=0; i<M; i++){
             input.nextToken();
-            voices[i] = (int) input.nval;
-        }
-        return voices;
-    }
+            voices[i] = (int) input.nval;}
+        return voices;}
 
     Map<Integer, Integer> countVoices(int N, int[] voices){
         Map<Integer, Integer> count = new HashMap<>();
         for(int id=1; id<=N; id++){
-            count.put(id, 0);
-        }
+            count.put(id, 0);}
         for (int id: voices){
             int value = count.get(id);
             value++;
-            count.replace(id, value);
-        }
-        return count;
-    }
+            count.replace(id, value);}
+        return count;}
 
     void printPercentage(int N, int M, Map<Integer, Integer> count) throws IOException{
         for(int id=1; id<=N; id++){
             float percentage = (count.get(id) * 100.0f )/ M;
             String fmt_percentage = String.format("%.2f%%", percentage);
             output.print(fmt_percentage);
-            output.print("\n");
-        }
-    }
+            output.print("\n");}}
 
     void solve() throws IOException {
             int[] nandm = getNandM();
@@ -63,6 +53,4 @@ public  class Solution1263 {
             int M = nandm[1];
             int[] voices = getVoices(M);
             Map<Integer, Integer> count = countVoices(N, voices);
-            printPercentage(N, M, count);
-        }
-}
+            printPercentage(N, M, count);}}

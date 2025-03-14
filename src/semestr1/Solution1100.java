@@ -5,8 +5,7 @@ import java.util.Comparator;
 public class Solution1100 {
 
   public static void main(String[] args) throws IOException {
-    new Solution1100().run();
-  }
+    new Solution1100().run();}
 
   StreamTokenizer input;
   PrintWriter output;
@@ -21,8 +20,7 @@ public class Solution1100 {
   { input.nextToken();
     return (int)input.nval;}
 
-  void solve() throws IOException
-  {
+  void solve() throws IOException {
     int count_commands = nextInt();
     int[][] commands = new int[count_commands][2];
     for(int i=0; i<count_commands; i++){
@@ -36,5 +34,5 @@ public class Solution1100 {
         output.print(row[0]);
         output.print(" ");
         output.print(row[1]);
-        output.print("\n");
-    }}}
+        output.print("\n");}
+ }}

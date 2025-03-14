@@ -3,8 +3,7 @@ import java.io.*;
 
 public  class Solution1785 {
     public static void main(String[] args) throws IOException {
-       new Solution1785().run();
-    }
+       new Solution1785().run();}
 
     StreamTokenizer input;
     PrintWriter output;
@@ -17,8 +16,7 @@ public  class Solution1785 {
 
     int nextInt() throws IOException{
         input.nextToken();
-        return  (int) input.nval;
-    }
+        return  (int) input.nval;}
 
     void solve() throws IOException {
             int N = nextInt();
@@ -40,8 +38,6 @@ public  class Solution1785 {
             else if (N>=5){
                 result = "several";}
         else { result = "few";}
-
             output.print(result);
-            output.print("\n");
-        }
+            output.print("\n");}
     }

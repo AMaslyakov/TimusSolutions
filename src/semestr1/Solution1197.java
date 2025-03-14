@@ -6,8 +6,7 @@ import java.util.Set;
 
 public  class Solution1197 {
     public static void main(String[] args) throws IOException {
-       new Solution1197().run();
-    }
+       new Solution1197().run();}
 
     StreamTokenizer input;
     PrintWriter output;
@@ -21,14 +20,11 @@ public  class Solution1197 {
     public String[] getKnightTests() throws IOException {
       input.nextToken();
       int N = (int) input.nval;
-
       String[] cells = new String[N];
       for (int i=0; i<N; i++){
           input.nextToken();
-          cells[i] = input.sval;
-      }
-      return cells;
-    }
+          cells[i] = input.sval;}
+      return cells;}
 
     int attacked_cells(String cell){
         final int[][] points = {{-1, -2},{-2, -1},{-2, 1},{-1, 2},{1, 2},{2, 1},{2, -1},{1, -2}};
@@ -41,19 +37,15 @@ public  class Solution1197 {
         for(int[] point: points){
             int nv = v + point[0];
             int nh = h + point[1];
-           if(0 <= nv && nv < 8 && 0 <= nh && nh < 8){
-               sum_cells += 1;
-           }
+            if(0 <= nv && nv < 8 && 0 <= nh && nh < 8){
+               sum_cells += 1;}
         }
-        return  sum_cells;
-    }
+        return  sum_cells;}
 
     void solve() throws IOException {
         String[] tests = getKnightTests();
         for(String test: tests){
             int sum_cells = attacked_cells(test);
             output.print(sum_cells);
-            output.print("\n");
-        }
-    }
-}
+            output.print("\n");}
+    }}

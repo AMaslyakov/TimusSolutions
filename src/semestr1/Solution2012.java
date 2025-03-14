@@ -8,9 +8,8 @@ public class Solution2012 {
     int f = input.nextInt();
     int S = 12;
 
-    if ((S-f)*45 <= 4 * 60){
+    if ((S-f)*45 <= 4 * 60)
       System.out.println("YES");
-    } else {
+    else 
       System.out.println("NO");
-    }
   }}

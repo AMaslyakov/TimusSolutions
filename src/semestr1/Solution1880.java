@@ -6,12 +6,10 @@ import java.util.Set;
 
 public  class Solution1880 {
     public static void main(String[] args) throws IOException {
-       new Solution1880().run();
-    }
+       new Solution1880().run();}
 
     StreamTokenizer input;
     PrintWriter output;
-
 
     void run() throws IOException {
         input = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
@@ -25,10 +23,8 @@ public  class Solution1880 {
       HashSet<Integer> numbers = new HashSet<>();
       for (int i=0; i<N; i++){
           input.nextToken();
-          numbers.add((int) input.nval);
-      }
-      return numbers;
-    }
+          numbers.add((int) input.nval);}
+      return numbers;}
 
     void solve() throws IOException {
         HashSet<Integer> fp = nextParticipiantNumbers();
@@ -37,6 +33,5 @@ public  class Solution1880 {
         intersection.retainAll(fp);
         intersection.retainAll(sp);
         output.print(intersection.size());
-        output.print("\n");
-    }
+        output.print("\n");}
 }

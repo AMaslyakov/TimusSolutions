@@ -3,8 +3,7 @@ import java.util.Arrays;
 
 public  class Solution1910 {
     public static void main(String[] args) throws IOException {
-       new Solution1910().run();
-    }
+       new Solution1910().run();}
 
     StreamTokenizer input;
     PrintWriter output;
@@ -17,17 +16,14 @@ public  class Solution1910 {
 
     int getN() throws IOException {
         input.nextToken();
-        return (int) input.nval;
-    }
+        return (int) input.nval;}
 
     int[] getSections(int N) throws IOException{
         int sections[] = new int[N];
         for (int i=0; i<N; i++){
             input.nextToken();
-            sections[i] = (int) input.nval;
-        }
-        return  sections;
-    }
+            sections[i] = (int) input.nval;}
+        return  sections;}
 
     void solve() throws IOException {
             int N = getN();
@@ -40,10 +36,8 @@ public  class Solution1910 {
                 int tmp = sections[i] + sections[i+1] + sections[i+2];
                 if(tmp > sumOfThree){
                     sumOfThree = tmp;
-                    middleSection = i+2;
-                }
+                    middleSection = i+2;}
             }
-
             output.print(sumOfThree);
             output.print(" ");
             output.print(middleSection);

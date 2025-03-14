@@ -2,8 +2,7 @@ import java.io.*;
 
 public  class Solution1607 {
     public static void main(String[] args) throws IOException {
-       new Solution1607().run();
-    }
+       new Solution1607().run();}
 
     StreamTokenizer input;
     PrintWriter output;
@@ -16,8 +15,7 @@ public  class Solution1607 {
 
     int nextInt() throws IOException {
         input.nextToken();
-        return (int) input.nval;
-    }
+        return (int) input.nval;}
 
     void solve() throws IOException {
             int CostPetya = nextInt();
@@ -28,12 +26,9 @@ public  class Solution1607 {
             while (CostPetya <= CostTaxman) {
                 if (CostPetya + PetyaAddition > CostTaxman){
                     CostPetya = CostTaxman;
-                    break;
-                }
+                    break;}
                 CostPetya += PetyaAddition;
-                CostTaxman -= DiscountTaxman;
-            }
+                CostTaxman -= DiscountTaxman;}
             output.print(CostPetya);
-
             output.print("\n");
         }}

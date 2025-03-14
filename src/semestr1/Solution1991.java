@@ -2,8 +2,7 @@ import java.io.*;
 
 public  class Solution1991 {
     public static void main(String[] args) throws IOException {
-       new Solution1991().run();
-    }
+       new Solution1991().run();}
 
     StreamTokenizer input;
     PrintWriter output;
@@ -16,17 +15,14 @@ public  class Solution1991 {
 
     int getInt() throws IOException {
         input.nextToken();
-        return (int) input.nval;
-    }
+        return (int) input.nval;}
 
     int[] getCarts(int N) throws IOException{
         int sections[] = new int[N];
         for (int i=0; i<N; i++){
             input.nextToken();
-            sections[i] = (int) input.nval;
-        }
-        return  sections;
-    }
+            sections[i] = (int) input.nval;}
+        return  sections;}
 
     void solve() throws IOException {
             int N = getInt();
@@ -42,10 +38,8 @@ public  class Solution1991 {
                if(amount < 0){
                    livedroids += Math.abs(amount);
                } else {
-                   boombooms += amount;
-               }
+                   boombooms += amount;}
             }
-
             output.print(boombooms);
             output.print(" ");
             output.print(livedroids);

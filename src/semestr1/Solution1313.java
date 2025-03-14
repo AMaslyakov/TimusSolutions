@@ -3,8 +3,7 @@ import java.util.ArrayList;
 
 public  class Solution1313 {
     public static void main(String[] args) throws IOException {
-       new Solution1313().run();
-    }
+       new Solution1313().run();}
 
     StreamTokenizer input;
     PrintWriter output;
@@ -17,26 +16,22 @@ public  class Solution1313 {
 
     int getN() throws IOException {
         input.nextToken();
-        return (int) input.nval;
-    }
+        return (int) input.nval;}
 
     int[][] getLines(int N) throws IOException{
         int[][] lines = new int[N][N];
         for(int i=0; i<N; i++){
            for(int j=0; j<N; j++){
                input.nextToken();
-               lines[i][j] = (int) input.nval;
-           }
+               lines[i][j] = (int) input.nval;}
         }
-        return lines;
-    }
+        return lines;}
 
     void solve() throws IOException {
         int N = getN();
         int[][] lines = getLines(N);
-
+        
         ArrayList<Integer> result = new ArrayList<>();
-
         for (int d = 0; d < N * 2 - 1; d++) {
             int r;
             int c;
@@ -51,12 +46,9 @@ public  class Solution1313 {
             while (r >= 0 && c < N) {
                 result.add(lines[r][c]);
                 r--;
-                c++;
-            }
+                c++;}
         }
         for (int pixel : result) {
             output.print(pixel);
             output.print(" ");}
-        output.print("\n");
-    }
-}
+        output.print("\n");}}
