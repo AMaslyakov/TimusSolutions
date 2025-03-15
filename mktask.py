@@ -1,6 +1,6 @@
 import os
 
-TMP_JAVACLASS = """public static  class Solution{}{{
+TMP_JAVACLASS = """public class Solution{}{{
     public static void main(String[] args){{
 
     }}
