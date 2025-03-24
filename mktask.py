@@ -7,17 +7,52 @@ TMP_JAVACLASS = """public class Solution{}{{
 }}
 """
 
+TMP_FAST = """import java.io.*;
 
-def add_class(file, task_number):
-        file.write(TMP_JAVACLASS.format(task_number))
+public class Solution{0} {{
+
+  public static void main(String[] args) throws IOException {{
+    new Solution{0}().run();}}
+
+  StreamTokenizer input;
+  PrintWriter output;
+
+  void run() throws IOException  {{
+          input = new StreamTokenizer(new BufferedReader(new InputStreamReader(System.in)));
+          output = new PrintWriter(System.out);
+          solve();
+          output.flush();}}
+
+  int nextInt() throws IOException
+  {{ input.nextToken();
+    return (int)input.nval;
+  }}
+
+  void solve() throws IOException {{
+
+ }}
+}}
+"""
+
+def add_class(file, task_number, tmp):
+        file.write(tmp.format(task_number))
 
 
 def create_solution_file():
     # Запрашиваем номер задачи у пользователя
-    task_number = input("Введите номер задачи (от 1000 до 9000): ")
+    task_type = input("Как шаблон использовать:\n1 Scanner\n2 Tokenizer")
+
+    match task_type:
+        case "1":
+            tmp = TMP_JAVACLASS
+        case "2":
+            tmp = TMP_FAST
+
+
+    task_number = input("Введите номер задачи (от 1000 до 2200): ")
 
     # Проверяем, что номер задачи находится в допустимом диапазоне
-    if not task_number.isdigit() or int(task_number) < 1000 or int(task_number) > 9000:
+    if not task_number.isdigit() or int(task_number) < 1000 or int(task_number) > 2200:
         print("Ошибка: номер задачи должен быть числом от 1000 до 9000.")
         return
 
@@ -31,7 +66,7 @@ def create_solution_file():
 
     # Создаем пустой файл
     with open(file_name, "w") as file:
-        add_class(file, task_number) # Просто создаем пустой файл
+        add_class(file, task_number, tmp) # Просто создаем пустой файл
 
     # Выводим сообщение об успешном создании файла
     print(f"Файл {file_name} успешно создан.")
