@@ -1,14 +1,16 @@
+package semestr2;
+
 import java.util.Scanner;
 
 public class Solution1005{
     public static void main(String[] args){
-        Scanner scanner = new Scanner(System.in);
+        Scanner input = new Scanner(System.in);
         
-        int n = scanner.nextInt();
+        int n = input.nextInt();
         int[] weights = new int[n];
         
         for (int i = 0; i < n; i++) {
-            weights[i] = scanner.nextInt();
+            weights[i] = input.nextInt();
         }
         
         int m = findMinDifference(weights, n);
@@ -21,11 +23,9 @@ public class Solution1005{
             totalWeight += weight;
         }
         
-        // Создаем массив для хранения возможных сумм
         boolean[] dp = new boolean[totalWeight + 1];
         dp[0] = true;
         
-        // Заполняем массив dp
         for (int weight : weights) {
             for (int j = totalWeight; j >= weight; j--) {
                 if (dp[j - weight]) {
@@ -34,7 +34,6 @@ public class Solution1005{
             }
         }
         
-        // Находим минимальную разность
         int minDiff = Integer.MAX_VALUE;
         for (int i = 0; i <= totalWeight / 2; i++) {
             if (dp[i]) {
