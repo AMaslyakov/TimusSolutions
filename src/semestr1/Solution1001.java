@@ -1,6 +1,7 @@
+package semestr1;
+
 import java.util.Scanner;
 import java.util.ArrayList;
-import java.util.Collections;
 
 public class Solution1001 {
   public static void main(String[] args) {

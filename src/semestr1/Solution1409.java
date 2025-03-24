@@ -1,3 +1,4 @@
+package semestr1;
 
 public class Solution1409 {
   public static void main(String[] args) {

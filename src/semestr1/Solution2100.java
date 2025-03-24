@@ -1,4 +1,5 @@
-import java.util.Arrays;
+package semestr1;
+
 import java.util.Scanner;
 
 public class Solution2100 {

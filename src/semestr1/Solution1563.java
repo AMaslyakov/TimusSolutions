@@ -1,3 +1,4 @@
+package semestr1;
 
 import java.util.Scanner;
 import java.util.HashSet;
