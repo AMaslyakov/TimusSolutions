@@ -5,6 +5,12 @@
 
 ## Задачи решенные во 2 Семестре
 
+### Код 
+
+[2 семестр](https://github.com/AMaslyakov/TimusSolutions/tree/main/src/semestr2)
+
+### Список задач
+
 [Задача 1005](https://acm.timus.ru/problem.aspx?space=1&num=1005)
 
 [Задача 1068](https://acm.timus.ru/problem.aspx?space=1&num=1068)
