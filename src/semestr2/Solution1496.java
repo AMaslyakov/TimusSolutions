@@ -10,22 +10,12 @@ public class Solution1496 {
         int N = input.nextInt();
         input.nextLine();
         String[] members = new String[N];
-        for(int i =0; i<N; i++){
-            members[i] = input.nextLine();
-        }
-
+        for(int i =0; i<N; i++){members[i] = input.nextLine();}
         Map<String, Integer> submits = new HashMap<>();
         for(String m: members){
-            if(!submits.containsKey(m)){
-                submits.put(m, 1);
-            }else{
-                submits.replace(m, submits.get(m), submits.get(m) + 1);
-            }
-        }
-
+            if(!submits.containsKey(m)){submits.put(m, 1);}
+            else{submits.replace(m, submits.get(m),
+                                 submits.get(m) + 1);}}
         submits.forEach((k,v)->{
-            if(v>1)System.out.println(k);
-        });
-
-    }
-}
+            if(v>1)System.out.println(k);});
+    }}

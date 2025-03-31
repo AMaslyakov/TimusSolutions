@@ -9,8 +9,5 @@ public class Solution1264{
       int N = input.nextInt();
       int M = input.nextInt();
 
-      System.out.println(N*(M+1));
-
-
-    }
+      System.out.println(N*(M+1));}
 }

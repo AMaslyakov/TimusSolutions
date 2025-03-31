@@ -9,14 +9,9 @@ public class Solution1545 {
         Scanner input = new Scanner(System.in);
         int N = input.nextInt();
         input.nextLine();
-
-        List<String> sylabs = new ArrayList<>();
-        for(int i=0; i<N; i++){
-            sylabs.add(input.nextLine());
-        }
+        List<String> syllables = new ArrayList<>();
+        for(int i=0; i<N; i++){syllables.add(input.nextLine());}
         char letter = input.nextLine().charAt(0);
-        sylabs.forEach(s->{
-            if(s.charAt(0) == letter) System.out.println(s);
-        });
-    }
-}
+        syllables.forEach(s->{
+            if(s.charAt(0) == letter) System.out.println(s);}
+        );}}

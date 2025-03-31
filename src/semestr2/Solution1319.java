@@ -25,7 +25,8 @@ public class Solution1319{
             }
 
             Arrays.stream(shells).forEach(a->{
-                for(int i=a.length-1; i>=0; i--) System.out.print(a[i] + " ");
+                for(int i=a.length-1; i>=0; i--){
+                    System.out.print(a[i] + " ");}
                 System.out.print("\n");
             });
         }}

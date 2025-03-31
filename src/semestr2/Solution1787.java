@@ -2,7 +2,6 @@ package semestr2;
 
 import java.util.Scanner;
 
-
 public class Solution1787{
     public static void main(String[] args){Scanner input = new Scanner(System.in);
    int k = input.nextInt();
@@ -12,8 +11,5 @@ public class Solution1787{
      int ai = input.nextInt();
      int tmp = ai + diff - k;
      if(tmp>0) diff = tmp;
-     else diff = 0;
-   }
-    System.out.println(diff);
-    }
-}
+     else diff = 0;}
+    System.out.println(diff);}}

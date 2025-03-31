@@ -12,10 +12,8 @@ public class Solution2056 {
         List<Integer> grades = new ArrayList<>();
         for(int i=0; i<N; i++){
             grades.add(input.nextInt());}
-
         String typeScholarship = checkScholarshipType(grades);
-        System.out.println(typeScholarship);
-    }
+        System.out.println(typeScholarship);}
 
     public static String checkScholarshipType(List<Integer> grades){
         if(grades.stream().anyMatch(g->g==3)) return "None";

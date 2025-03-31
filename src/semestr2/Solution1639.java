@@ -8,11 +8,8 @@ public class Solution1639 {
         int m = scanner.nextInt();
         int n = scanner.nextInt();
         
-        // Определяем, кто должен ходить первым
     if (m * n % 2 == 0) {
       System.out.println("[:=[first]");
     } else {
       System.out.println("[second]=:]");
-        }
-    }
-}
+        }}}

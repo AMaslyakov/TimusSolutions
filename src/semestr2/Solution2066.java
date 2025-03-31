@@ -13,21 +13,9 @@ a = input.nextInt();
 b = input.nextInt();
 c = input.nextInt();
 
-int[] exp = {
-a+b+c,
-a-b-c,
-a*b*c,
-a+b-c,
-a-b+c,
-a+b*c,
-a*b+c,
-a-b*c,
-a*b-c
-};
+int[] exp = {a+b+c, a-b-c, a*b*c,
+             a+b-c, a-b+c, a+b*c,
+             a*b+c, a-b*c, a*b-c};
 
 int m = Arrays.stream(exp).min().orElse(0);
-
-System.out.println(m);
-
-    }
-}
+System.out.println(m);}}

@@ -5,14 +5,13 @@ import java.util.Map;
 import java.util.HashMap;
 import java.util.Collections;
 
-
 public class Solution1585{
     public static void main(String[] args){
       Scanner input = new Scanner(System.in);
       int n = input.nextInt();
 
       Map<String, Integer> pinguins = new HashMap<>();
-      //Emperor Penguin», «Little Penguin» и «Macaroni Penguin»
+
       pinguins.put("Emperor Penguin",0);
       pinguins.put("Little Penguin",0);
       pinguins.put("Macaroni Penguin",0);
@@ -21,15 +20,11 @@ public class Solution1585{
 
       for(int i =0; i<n; i++){
          String species = input.nextLine();
-         pinguins.compute(species, (k,v)->v+1);
+         pinguins.compute(species, (_, v)->v+1);
       }
-
 
       Map.Entry<String, Integer> m = Collections.max(
           pinguins.entrySet(),
-          Map.Entry.comparingByValue()
-          );
+          Map.Entry.comparingByValue());
 
-        System.out.println(m.getKey());
-    }
-}
+        System.out.println(m.getKey());}}
